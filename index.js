@@ -14,6 +14,7 @@ var settings = {};
 settings.CONFIG_FILE = argv.config || 'config.xml';
 settings.SPLASH_FILE = argv.splash || 'splash.png';
 settings.OLD_XCODE_PATH = argv['xcode-old'] || false;
+settings.OLD_ANDROID_STUDIO_PATH = argv['android-old'] || false;
 settings.USE_STORYBOARD = argv['use-storyboard'] || false;
 
 /**
@@ -27,9 +28,14 @@ var getPlatforms = function (projectName) {
   var platforms = [];
   var xcodeFolder = '/Images.xcassets/LaunchImage.launchimage/';
   var xcodeStoryboardFolder = '/Images.xcassets/LaunchStoryboard.imageset/';
+  var androidStudioFolder = '/res/';
 
   if (settings.OLD_XCODE_PATH) {
     xcodeFolder = '/Resources/splash/';
+  }
+
+  if (settings.OLD_ANDROID_STUDIO_PATH) {
+    androidStudioFolder = '/app/src/main/res/';
   }
 
   if (settings.USE_STORYBOARD) {
@@ -83,7 +89,7 @@ var getPlatforms = function (projectName) {
   platforms.push({
     name : 'android',
     isAdded : fs.existsSync('platforms/android'),
-    splashPath : 'platforms/android/app/src/main/res/',
+    splashPath : 'platforms/android/' + androidStudioFolder,
     splash : [
       // Landscape
       { name: 'drawable-land-ldpi/screen.png',  width: 320,  height: 200  },

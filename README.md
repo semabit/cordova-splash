@@ -37,6 +37,11 @@ If you run a old version of Cordova for iOS and you need your files in `/Resourc
  
      $ cordova-splash --use-storyboard=true
 
+#### Android v6
+ To generate splashscreens for cordova-android v6, use the following:
+ 
+     $ cordova-splash --android-old=true
+
 #### Notes:
 
 - Your `config.ml` file will not be updated by the tool (because images are automatically created in the good folders)
