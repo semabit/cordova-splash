@@ -33,9 +33,16 @@ If you run a old version of Cordova for iOS and you need your files in `/Resourc
     $ cordova-splash --xcode-old
 
 #### iOS Storyboard Images
+
  To generate iOS storyboard images, use the following:
  
-     $ cordova-splash --use-storyboard=true
+     $ cordova-splash --use-storyboard
+
+#### Android v6
+
+ To generate splashscreens for cordova-android v6, use the following:
+ 
+     $ cordova-splash --android-old
 
 #### Notes:
 
