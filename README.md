@@ -32,6 +32,11 @@ If you run a old version of Cordova for iOS and you need your files in `/Resourc
 
     $ cordova-splash --xcode-old
 
+#### iOS Storyboard Images
+ To generate iOS storyboard images, use the following:
+ 
+     $ cordova-splash --use-storyboard=true
+
 #### Notes:
 
 - Your `config.ml` file will not be updated by the tool (because images are automatically created in the good folders)
