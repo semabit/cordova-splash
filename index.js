@@ -28,14 +28,14 @@ var getPlatforms = function (projectName) {
   var platforms = [];
   var xcodeFolder = '/Images.xcassets/LaunchImage.launchimage/';
   var xcodeStoryboardFolder = '/Images.xcassets/LaunchStoryboard.imageset/';
-  var androidStudioFolder = '/res/';
+  var androidStudioFolder = '/app/src/main/res/';
 
   if (settings.OLD_XCODE_PATH) {
     xcodeFolder = '/Resources/splash/';
   }
 
   if (settings.OLD_ANDROID_STUDIO_PATH) {
-    androidStudioFolder = '/app/src/main/res/';
+    androidStudioFolder = '/res/';
   }
 
   if (settings.USE_STORYBOARD) {
