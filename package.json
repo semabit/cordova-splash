@@ -1,9 +1,12 @@
 {
-  "name": "cordova-splash",
-  "version": "1.0.0",
+  "name": "@semabit/cordova-splash",
+  "version": "1.1.0",
   "description": "Automatic splash screen cropping for Cordova",
   "main": "index.js",
   "preferGlobal": true,
+  "bin": {
+    "cordova-splash": "bin/cordova-splash"
+  },
   "directories": {
     "bin": "./bin"
   },
